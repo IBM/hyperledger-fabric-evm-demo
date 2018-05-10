@@ -1,0 +1,401 @@
+/**
+
+	According to the Duo Design System guidelines for software products,
+	light, regular, and semibold are the ONLY weights to be used.
+
+	To use a specific font weight, you can use one of the class names
+	provided within the type scale code (ibm-light, ibm-regular, ibm-semibold)
+	or specify the font weight in your css
+	(font-weight: 300; // font-weight: 400; //font-weight: 600;).
+
+
+  Font Weights:
+  300 - Light
+  400 - Regular
+  600 - Semi Bold (Default Bold)
+
+	Class names:
+	ibm-italic
+	ibm-regular
+	ibm-semibold
+
+	ibm-alpha
+	ibm-beta
+	ibm-gamma
+	ibm-delta
+	ibm-body
+	ibm-label
+	ibm-chart
+	ibm-legal
+
+**/
+
+@font-face {
+  font-family: "ibm-plex-sans";
+  src: url("./assets/fonts/sans/web/woff2/IBMPlexSans-Light.woff2") format("woff2"), url("./assets/fonts/sans/web/woff/IBMPlexSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: "ibm-plex-sans";
+  src: url("./assets/fonts/sans/web/woff2/IBMPlexSans-LightItalic.woff2") format("woff2"), url("./assets/fonts/sans/web/woff/IBMPlexSans-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: "ibm-plex-sans";
+  src: url("./assets/fonts/sans/web/woff2/IBMPlexSans-Regular.woff2") format("woff2"), url("./assets/fonts/sans/web/woff/IBMPlexSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "ibm-plex-sans";
+  src: url("./assets/fonts/sans/web/woff2/IBMPlexSans-Italic.woff2") format("woff2"), url("./assets/fonts/sans/web/woff/IBMPlexSans-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic; }
+
+@font-face {
+  font-family: "ibm-plex-sans";
+  src: url("./assets/fonts/sans/web/woff2/IBMPlexSans-SemiBold.woff2") format("woff2"), url("./assets/fonts/sans/web/woff/IBMPlexSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: "ibm-plex-sans";
+  src: url("./assets/fonts/sans/web/woff2/IBMPlexSans-SemiBoldItalic.woff2") format("woff2"), url("./assets/fonts/sans/web/woff/IBMPlexSans-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic; }
+
+@font-face {
+  font-family: "ibm-plex-mono";
+  font-weight: 400;
+  font-style: normal;
+  src: url("./assets/fonts/mono/web/woff2/IBMPlexMono-Regular.woff2") format("woff2"), url("./assets/fonts/mono/web/woff/IBMPlexMono-Regular.woff") format("woff"); }
+
+* {
+	font-family: "ibm-plex-sans";
+	font-size: 100%;
+}
+
+html {
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale
+}
+
+.ibm {
+  font-family: "ibm-plex-sans";
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+  .ibm h1, .ibm h2, .ibm h3, .ibm h4, .ibm h5, .ibm h6, .ibm p {
+    margin-top: 0; }
+  .ibm .ibm-italic {
+    font-style: italic; }
+  .ibm .ibm-light {
+    font-weight: 300; }
+  .ibm .ibm-mono,
+  .ibm .ibm-mono * {
+    font-family: "ibm-plex-mono"; }
+  .ibm .ibm-regular {
+    font-weight: 400; }
+  .ibm strong,
+  .ibm .ibm-semibold {
+    font-weight: 600; }
+
+.ibm .ibm-legal {
+  color: #626262; }
+
+.ibm .ibm-legal,
+.ibm .ibm-chart {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  margin-bottom: 1.25rem; }
+
+.ibm small,
+.ibm .ibm-label {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-bottom: 1.25rem; }
+
+.ibm p,
+.ibm .ibm-body,
+.ibm h4,
+.ibm .ibm-delta {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem; }
+
+.ibm h4,
+.ibm .ibm-delta {
+  font-weight: 600;
+  margin-bottom: 1rem; }
+
+.ibm h3,
+.ibm .ibm-gamma {
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem; }
+
+.ibm .ibm-marketing h3,
+.ibm.ibm-marketing h3,
+.ibm .ibm-gamma-marketing {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-bottom: 1.75rem; }
+
+.ibm h2,
+.ibm .ibm-beta {
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 2rem; }
+
+.ibm .ibm-marketing h2,
+.ibm.ibm-marketing h2,
+.ibm .ibm-beta-marketing,
+.ibm h1,
+.ibm .ibm-alpha {
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  margin-bottom: 2rem; }
+
+.ibm .ibm-marketing h1,
+.ibm.ibm-marketing h1,
+.ibm [class*="ibm-alpha-marketing"] {
+  font-weight: 300;
+  font-size: 2.625rem;
+  line-height: 3rem;
+  margin-bottom: 1rem; }
+
+@media (min-width: 320px) {
+  .ibm h3,
+  .ibm .ibm-gamma {
+    font-size: calc(18px + (20 - 18) * (100vw - 320px) / (639 - 320));
+    line-height: calc(24px + (28 - 24) * (100vw - 320px) / (639 - 320));
+    margin-bottom: calc(24px + (28 - 24) * (100vw - 320px) / (639 - 320)); }
+  .ibm .ibm-marketing h3,
+  .ibm.ibm-marketing h3,
+  .ibm .ibm-gamma-marketing {
+    font-size: calc(20px + (24 - 20) * (100vw - 320px) / (639 - 320));
+    line-height: calc(28px + (32 - 28) * (100vw - 320px) / (639 - 320));
+    margin-bottom: calc(28px + (32 - 28) * (100vw - 320px) / (639 - 320)); }
+  .ibm .ibm-marketing h2,
+  .ibm.ibm-marketing h2,
+  .ibm .ibm-beta-marketing {
+    font-size: calc(28px + (36 - 28) * (100vw - 320px) / (639 - 320));
+    line-height: calc(36px + (44 - 36) * (100vw - 320px) / (639 - 320)); }
+  .ibm h1,
+  .ibm .ibm-alpha {
+    font-size: calc(28px + (32 - 28) * (100vw - 320px) / (639 - 320));
+    line-height: calc(36px + (40 - 36) * (100vw - 320px) / (639 - 320)); }
+  .ibm .ibm-marketing h1,
+  .ibm.ibm-marketing h1,
+  .ibm [class*="ibm-alpha-marketing"] {
+    font-size: calc(42px + (68 - 42) * (100vw - 320px) / (639 - 320));
+    line-height: calc(48px + (76 - 48) * (100vw - 320px) / (639 - 320));
+    margin-bottom: calc(16px + (20 - 16) * (100vw - 320px) / (639 - 320)); } }
+
+@media (min-width: 640px) {
+  .ibm h3,
+  .ibm .ibm-gamma {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin-bottom: 1.75rem; }
+  .ibm .ibm-marketing h3,
+  .ibm.ibm-marketing h3,
+  .ibm .ibm-gamma-marketing {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 2rem; }
+  .ibm h2,
+  .ibm .ibm-beta {
+    font-size: calc(24px + (28 - 24) * (100vw - 640px) / (1055 - 640));
+    line-height: calc(32px + (36 - 32) * (100vw - 640px) / (1055 - 640)); }
+  .ibm .ibm-marketing h2,
+  .ibm.ibm-marketing h2,
+  .ibm .ibm-beta-marketing {
+    font-weight: 300;
+    font-size: 2.25rem;
+    font-size: calc(36px + (42 - 36) * (100vw - 640px) / (1055 - 640));
+    line-height: 2.75rem;
+    line-height: calc(44px + (48 - 44) * (100vw - 640px) / (1055 - 640));
+    margin-bottom: 2rem;
+    margin-bottom: calc(36px + (36 - 32) * (100vw - 640px) / (1055 - 640)); }
+  .ibm h1,
+  .ibm .ibm-alpha {
+    font-weight: 300;
+    font-size: 2rem;
+    font-size: calc(32px + (36 - 32) * (100vw - 640px) / (1055 - 640));
+    line-height: 2.5rem;
+    line-height: calc(40px + (44 - 40) * (100vw - 640px) / (1055 - 640));
+    margin-bottom: calc(32px + (36 - 32) * (100vw - 640px) / (1055 - 640)); }
+  .ibm .ibm-marketing h1,
+  .ibm.ibm-marketing h1,
+  .ibm [class*="ibm-alpha-marketing"] {
+    font-weight: 300;
+    font-size: 4.25rem;
+    font-size: calc(68px + (156 - 68) * (100vw - 640px) / (1055 - 640));
+    line-height: 4.75rem;
+    line-height: calc(76px + (160 - 76) * (100vw - 640px) / (1055 - 640));
+    margin-bottom: 1.25rem;
+    margin-bottom: calc(20px + (32 - 20) * (100vw - 640px) / (1055 - 640)); } }
+
+@media (min-width: 1056px) {
+  .ibm h2,
+  .ibm .ibm-beta {
+    font-weight: 400;
+    font-size: 1.75rem;
+    line-height: 2.25rem; }
+  .ibm .ibm-marketing h2,
+  .ibm.ibm-marketing h2,
+  .ibm .ibm-beta-marketing {
+    font-weight: 300;
+    font-size: 2.625rem;
+    line-height: 3rem;
+    margin-bottom: 2.25rem; }
+  .ibm h1,
+  .ibm .ibm-alpha {
+    font-weight: 300;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin-bottom: 2.25rem; }
+  .ibm .ibm-marketing h1,
+  .ibm.ibm-marketing h1,
+  .ibm [class*="ibm-alpha-marketing"] {
+    font-weight: 300;
+    font-size: 9.75rem;
+    line-height: 10rem;
+    margin-bottom: 2rem; } }
+
+.ibm h1, .ibm h2, .ibm h3, .ibm h4, .ibm p, .ibm small {
+  max-width: 84.375vw; }
+
+@media (min-width: 640px) {
+  .ibm h1, .ibm h2, .ibm h3, .ibm h4, .ibm p {
+    max-width: 84.375vw; }
+  .ibm small {
+    max-width: 40.625vw; }
+  .ibm-col-sm-1 h1, .ibm-col-sm-1 h2, .ibm-col-sm-1 h3, .ibm-col-sm-1 h4, .ibm-col-sm-1 p {
+    max-width: 40.625vw; }
+  .ibm-col-md-1 h1, .ibm-col-md-1 h2, .ibm-col-md-1 h3, .ibm-col-md-1 h4, .ibm-col-md-1 p {
+    max-width: 18.75vw; }
+  .ibm-col-md-2 h1, .ibm-col-md-2 h2, .ibm-col-md-2 h3, .ibm-col-md-2 h4, .ibm-col-md-2 p {
+    max-width: 40.625vw; }
+  .ibm-col-md-3 h1, .ibm-col-md-3 h2, .ibm-col-md-3 h3, .ibm-col-md-3 h4, .ibm-col-md-3 p {
+    max-width: 62.5vw; }
+  .ibm-col-md-4 h1, .ibm-col-md-4 h2, .ibm-col-md-4 h3, .ibm-col-md-4 h4, .ibm-col-md-4 p {
+    max-width: 84.375vw; }
+  .ibm-col-md-4 small {
+    max-width: 40.625vw; } }
+
+@media (min-width: 1056px) {
+  .ibm h1, .ibm h2, .ibm h3, .ibm h4, .ibm p {
+    max-width: 56.25vw; }
+  .ibm small {
+    max-width: 28.125vw; }
+  .ibm-col-sm-1 h1, .ibm-col-sm-1 h2, .ibm-col-sm-1 h3, .ibm-col-sm-1 h4, .ibm-col-sm-1 p {
+    max-width: 37.5vw; }
+  .ibm-col-sm-1 small {
+    max-width: 28.125vw; }
+  .ibm-col-md-1 h1, .ibm-col-md-1 h2, .ibm-col-md-1 h3, .ibm-col-md-1 h4, .ibm-col-md-1 p {
+    max-width: 18.75vw; }
+  .ibm-col-md-2 h1, .ibm-col-md-2 h2, .ibm-col-md-2 h3, .ibm-col-md-2 h4, .ibm-col-md-2 p {
+    max-width: 37.5vw; }
+  .ibm-col-md-2 small {
+    max-width: 28.125vw; }
+  .ibm-col-md-3 h1, .ibm-col-md-3 h2, .ibm-col-md-3 h3, .ibm-col-md-3 h4, .ibm-col-md-3 p,
+  .ibm-col-md-4 h1,
+  .ibm-col-md-4 h2,
+  .ibm-col-md-4 h3,
+  .ibm-col-md-4 h4,
+  .ibm-col-md-4 p {
+    max-width: 56.25vw; }
+  .ibm-col-md-3 small,
+  .ibm-col-md-4 small {
+    max-width: 28.125vw; }
+  .ibm-col-lg-2 h1, .ibm-col-lg-2 h2, .ibm-col-lg-2 h3, .ibm-col-lg-2 h4, .ibm-col-lg-2 p {
+    max-width: 18.75vw; }
+  .ibm-col-lg-3 h1, .ibm-col-lg-3 h2, .ibm-col-lg-3 h3, .ibm-col-lg-3 h4, .ibm-col-lg-3 p {
+    max-width: 28.125vw; }
+  .ibm-col-lg-4 h1, .ibm-col-lg-4 h2, .ibm-col-lg-4 h3, .ibm-col-lg-4 h4, .ibm-col-lg-4 p {
+    max-width: 37.5vw; }
+  .ibm-col-lg-4 small {
+    max-width: 28.125vw; }
+  .ibm-col-lg-5 h1, .ibm-col-lg-5 h2, .ibm-col-lg-5 h3, .ibm-col-lg-5 h4, .ibm-col-lg-5 p {
+    max-width: 46.875vw; }
+  .ibm-col-lg-5 small {
+    max-width: 28.125vw; }
+  .ibm-col-lg-6 h1, .ibm-col-lg-6 h2, .ibm-col-lg-6 h3, .ibm-col-lg-6 h4, .ibm-col-lg-6 p,
+  .ibm-col-lg-7 h1,
+  .ibm-col-lg-7 h2,
+  .ibm-col-lg-7 h3,
+  .ibm-col-lg-7 h4,
+  .ibm-col-lg-7 p,
+  .ibm-col-lg-8 h1,
+  .ibm-col-lg-8 h2,
+  .ibm-col-lg-8 h3,
+  .ibm-col-lg-8 h4,
+  .ibm-col-lg-8 p {
+    max-width: 56.25vw; }
+  .ibm-col-lg-6 small,
+  .ibm-col-lg-7 small,
+  .ibm-col-lg-8 small {
+    max-width: 28.125vw; } }
+
+@media (min-width: 1650px) {
+  .ibm h1, .ibm h2, .ibm h3, .ibm h4, .ibm p {
+    max-width: 928.125px; }
+  .ibm small {
+    max-width: 464.0625px; }
+  .ibm-col-sm-1 h1, .ibm-col-sm-1 h2, .ibm-col-sm-1 h3, .ibm-col-sm-1 h4, .ibm-col-sm-1 p {
+    max-width: 618.75px; }
+  .ibm-col-sm-1 small {
+    max-width: 464.0625px; }
+  .ibm-col-md-1 h1, .ibm-col-md-1 h2, .ibm-col-md-1 h3, .ibm-col-md-1 h4, .ibm-col-md-1 p {
+    max-width: 309.375px; }
+  .ibm-col-md-2 h1, .ibm-col-md-2 h2, .ibm-col-md-2 h3, .ibm-col-md-2 h4, .ibm-col-md-2 p {
+    max-width: 618.75px; }
+  .ibm-col-md-2 small {
+    max-width: 464.0625px; }
+  .ibm-col-md-3 h1, .ibm-col-md-3 h2, .ibm-col-md-3 h3, .ibm-col-md-3 h4, .ibm-col-md-3 p,
+  .ibm-col-md-4 h1,
+  .ibm-col-md-4 h2,
+  .ibm-col-md-4 h3,
+  .ibm-col-md-4 h4,
+  .ibm-col-md-4 p {
+    max-width: 928.125px; }
+  .ibm-col-md-3 small,
+  .ibm-col-md-4 small {
+    max-width: 464.0625px; }
+  .ibm-col-lg-2 h1, .ibm-col-lg-2 h2, .ibm-col-lg-2 h3, .ibm-col-lg-2 h4, .ibm-col-lg-2 p {
+    max-width: 309.375px; }
+  .ibm-col-lg-3 h1, .ibm-col-lg-3 h2, .ibm-col-lg-3 h3, .ibm-col-lg-3 h4, .ibm-col-lg-3 p {
+    max-width: 464.0625px; }
+  .ibm-col-lg-4 h1, .ibm-col-lg-4 h2, .ibm-col-lg-4 h3, .ibm-col-lg-4 h4, .ibm-col-lg-4 p {
+    max-width: 618.75px; }
+  .ibm-col-lg-4 small {
+    max-width: 464.0625px; }
+  .ibm-col-lg-5 h1, .ibm-col-lg-5 h2, .ibm-col-lg-5 h3, .ibm-col-lg-5 h4, .ibm-col-lg-5 p {
+    max-width: 773.4375px; }
+  .ibm-col-lg-5 small {
+    max-width: 464.0625px; }
+  .ibm-col-lg-6 h1, .ibm-col-lg-6 h2, .ibm-col-lg-6 h3, .ibm-col-lg-6 h4, .ibm-col-lg-6 p,
+  .ibm-col-lg-7 h1,
+  .ibm-col-lg-7 h2,
+  .ibm-col-lg-7 h3,
+  .ibm-col-lg-7 h4,
+  .ibm-col-lg-7 p,
+  .ibm-col-lg-8 h1,
+  .ibm-col-lg-8 h2,
+  .ibm-col-lg-8 h3,
+  .ibm-col-lg-8 h4,
+  .ibm-col-lg-8 p {
+    max-width: 928.125px; }
+  .ibm-col-lg-6 small,
+  .ibm-col-lg-7 small,
+  .ibm-col-lg-8 small {
+    max-width: 464.0625px; } }

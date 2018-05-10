@@ -1,0 +1,148 @@
+@keyframes rotate-loop {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.vote__container {
+    margin-right: 574px;
+    max-width: 705px;
+    display: block;
+    margin: 0 auto;
+    text-align: left;
+    /* position: relative; */
+}
+
+.radio__button--container {
+    position: relative;
+}
+
+.arrow__container {
+    position: absolute;
+    left: 2rem;
+    top: 8rem;
+    background-color: #343C41;
+    padding: .5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back__arrow {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+/* Radio buttons */
+
+.radio {
+  padding: 1rem;
+  background-color: #343C41;
+  border-bottom: 1px solid #23292E;
+
+}
+.radio input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+.radio .radio-label:before {
+  content: '';
+  background: #343C41;
+  border-radius: 100%;
+  border: 1px solid #f4f4f4;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  position: relative;
+  margin-right: 1rem;
+  vertical-align: top;
+  cursor: pointer;
+  text-align: center;
+  transition: all 250ms ease;
+}
+
+/* if it is selected */
+.radio-selected-label.radio-label:before {
+  background-color: #1269FB;
+  box-shadow: inset 0 0 0 4px #343C41;
+  border: 1px solid #1269FB;
+}
+
+.submit__vote--btn {
+    position: absolute;
+    right: 0;
+    transition: all .2s;
+}
+
+.submit__vote--btn:disabled {
+    background-color: #343C41;
+    cursor: not-allowed;
+}
+
+.side__panel--container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    height: 100vh;
+    width: calc(500px - 5.75rem);
+    background-color: #141414;
+    color: #fff;
+    padding: 6rem 2.75rem 2rem 2.75rem;
+}
+
+.loading__spinner {
+    animation: rotate-loop .5s linear infinite;
+    width: 1rem;
+    height: 1rem;
+}
+
+.side__panel--container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    height: 100vh;
+    width: calc(500px - 5.75rem);
+    background-color: #141414;
+    color: #fff;
+    padding: 2rem 2.75rem 2rem 2.75rem;
+}
+
+.vote__container {
+    margin-right: auto;
+    padding: 1rem;
+}
+
+.diagram__image {
+    width: 75%;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 1220px) {
+    .side__panel--container {
+        display: block;
+    }
+    .vote__container {
+        margin-right: 500px;
+    }
+    .arrow__container {
+        top: 5.5rem;
+        left: 2rem;
+    }
+}
+
+@media (min-width: 1680px) {
+    .vote__container {
+        margin-right: auto;
+    }
+}

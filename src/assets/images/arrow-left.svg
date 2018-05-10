@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="24px" viewBox="0 0 25 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow-left</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="System-Icons" transform="translate(-380.000000, -108.000000)">
+            <g id="arrow-left" transform="translate(391.000000, 120.000000) rotate(-180.000000) translate(-391.000000, -120.000000) translate(375.000000, 104.000000)">
+                <g id="artwork" transform="translate(2.000000, 4.000000)" fill="#ffffff" fill-rule="nonzero">
+                    <polygon id="Shape" points="12.71 0.29 11.29 1.71 20.59 11 0 11 0 13 20.59 13 11.29 22.29 12.71 23.71 24.41 12"></polygon>
+                </g>
+                <g id="transparent_box">
+                    <rect id="Rectangle-path" x="0" y="0" width="32" height="32"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
