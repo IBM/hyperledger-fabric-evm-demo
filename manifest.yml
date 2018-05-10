@@ -1,5 +1,5 @@
 applications:
 - name: fabric-evm-demo
-  memory: 128M
+  memory: 256M
   buildpack: sdk-for-nodejs
   command: npm start
