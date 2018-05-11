@@ -76,7 +76,7 @@ class Vote extends Component {
             </Link>
             <h1 className="ibm-light">Question</h1>
             <p>
-              How awesome is it that you can have Hyperledger Burrow's
+              How awesome is it that you can have Hyperledger Burrow&quote;s
               Ethereum VM smart contract engine running as chaincode
               inside Hyperledger Fabric?
             </p>
