@@ -1,5 +1,8 @@
+---
 applications:
 - name: fabric-evm-demo
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
   memory: 1024M
-  buildpack: sdk-for-nodejs
-  command: npm start
+  command: npm run bluemix
+  hosts:
+    - fabric-evm-demo
