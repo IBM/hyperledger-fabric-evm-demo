@@ -30,7 +30,7 @@ app.enable("trust proxy");
 app.use(_express2.default.static("./build"));
 
 app.get("*", function (req, res) {
-    res.sendFile(_path2.default.resolve(__dirname, "build", "index.html"));
+    res.sendFile(_path2.default.join(__dirname, "build", "index.html"));
 });
 
 app.listen(port, function (err) {
