@@ -18,9 +18,11 @@
   },
   "scripts": {
     "start": "react-scripts start \"index.js\"",
-    "build": "react-scripts build && babel index.js -o index-build.js"
+    "build": "react-scripts build && babel index.js -o index-build.js",
+    "bluemix": "NODE_ENV=production node index-build.js"
   },
   "engines": {
-    "node": "4.2.x"
+    "node": "8.10.0",
+    "npm": "4.1.2"
   }
 }
