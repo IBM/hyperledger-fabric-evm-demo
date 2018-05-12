@@ -52,12 +52,13 @@ class Results extends Component {
               </Link>
               <h1>Results</h1>
               <p>
-                How awesome is it that you can have <a href="https://www.hyperledger.org/projects/hyperledger-burrow" target="_blank" rel="noopener noreferrer">
-                  Hyperledger Burrow&quote;s{" "}
-                </a>
-                Ethereum VM smart contract engine running as chaincode inside <a href="https://www.hyperledger.org/projects/fabric" target="_blank" rel="noopener noreferrer">
-                  Hyperledger Fabric
-                </a>?
+                How awesome is it that you can have the <a
+                  href="https://www.hyperledger.org/projects/hyperledger-burrow"
+                  target="_blank"
+                  rel="noopener noreferrer">Hyperledger Burrow</a> Ethereum VM
+                  smart contract engine running as chaincode inside <a
+                  href="https://www.hyperledger.org/projects/fabric" target="_blank"
+                  rel="noopener noreferrer">Hyperledger Fabric</a>?
               </p>
               {!this.state.loading ? <div className="results__percentage--container">
                   <div className="results__item--container">

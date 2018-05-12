@@ -76,9 +76,13 @@ class Vote extends Component {
             </Link>
             <h1 className="ibm-light">Question</h1>
             <p>
-              How awesome is it that you can have Hyperledger Burrow&quote;s
-              Ethereum VM smart contract engine running as chaincode
-              inside Hyperledger Fabric?
+              How awesome is it that you can have the <a
+                href="https://www.hyperledger.org/projects/hyperledger-burrow"
+                target="_blank"
+                rel="noopener noreferrer">Hyperledger Burrow</a> Ethereum VM
+                smart contract engine running as chaincode inside <a
+                href="https://www.hyperledger.org/projects/fabric" target="_blank"
+                rel="noopener noreferrer">Hyperledger Fabric</a>?
             </p>
             <p className="ibm-label">*After submitting your vote, an Ethereum smart contract will be executed on HyperLedger Fabric.</p>
             <form onSubmit={this.handleSubmit} action="POST">

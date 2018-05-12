@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import { withRouter } from "react-router-dom";
 import './home.css';
 
+const users = [
+  '9ab9dd6465daf96f9c53abd1d21f5cd2bc0df4ee',
+  'd58bc8f6fb11ada3603ec72d5d584f0d3904746d',
+  '3fdbee0cafb149617d8ec88f67daf825bb71fb95',
+  '8b73e85b693af3d5f4fb11461f7a2f7e7e319ca2'
+];
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -9,10 +16,17 @@ class Home extends Component {
       username: "",
       password: ""
     };
-
-    this.setUserName = this.setUserName.bind(this);
     this.setPassword = this.setPassword.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  setPassword(e) {
+    this.setState({
+      password: e.target.value
+    });
+    this.setState({
+      username: users[Math.floor(Math.random() * 4)]
+    })
   }
 
   setUserName(e) {
@@ -20,12 +34,6 @@ class Home extends Component {
       username: e.target.value
     });
   }
-
-    setPassword(e) {
-        this.setState({
-            password: e.target.value
-        });
-    }
 
   setCookie() {
     return new Promise((resolve, reject) => {
@@ -48,10 +56,9 @@ class Home extends Component {
   handleSubmit(e) {
     e.preventDefault();
     console.log("form submitted.");
-    if (
-      this.state.username === "9ab9dd6465daf96f9c53abd1d21f5cd2bc0df4ee" &&
-      this.state.password === "some-password"
-    ) {
+    console.log("username: " + this.state.username);
+    console.log("password: " + this.state.password);
+    if ( this.state.password.trim() === "some-password" ) {
       // set cookie in here
       this.setCookie().then(() => {
         console.log("Set cookie and promise successfully. Redirecting to voting page.");
@@ -64,10 +71,9 @@ class Home extends Component {
 
   render() {
     return <div className="home__container">
-        <h1>Log In</h1>
-        <h4>Fabric and Burrow EVM Demo</h4>
+        <h1>Hyperledger Fabric with Hyperledger Burrow EVM chaincode plugin Demo</h1>
+        <h4>Log In</h4>
         <form className="form__container" onSubmit={this.handleSubmit} action="POST">
-          <input type="text" placeholder="Username" className="voting__input" onChange={this.setUserName} />
           <input type="password" placeholder="Password" className="voting__input" onChange={this.setPassword} />
           <input className="duo__btn login__btn" type="submit" value="Login" name="submit" />
         </form>
