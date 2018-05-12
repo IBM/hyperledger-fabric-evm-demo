@@ -17,10 +17,8 @@ deployed to Cloud Foundry, e.g. using [IBM Cloud](https://console.bluemix.net/).
 
 To deploy the contract, you need a running Hyperledger Fabric cluster
 that has the https://github.com/hyperledger/fabric-chaincode-evm plugin
-installed. Here's a video with the steps to deploy this, and the correponding
-Web3-Fabric proxy server:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yRdaaWkLgZ0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+installed. Here's [a video](https://www.youtube.com/embed/yRdaaWkLgZ0)
+with the steps to deploy this, and the correponding Web3-Fabric proxy server.
 
 And here's the [repo](https://github.com/swetharepakula/fabric-evm-ibm-container-service)
 with the bits you'll need.
