@@ -26,19 +26,35 @@ class Results extends Component {
         var valA = parseInt(optionA.substring(optionA.indexOf(',') + 1), 10);
         var optionB = myContract.proposals(1).toString();
         var valB = parseInt(optionB.substring(optionB.indexOf(',') + 1), 10);
-        var tot = valA + valB;
+        var optionC = myContract.proposals(2).toString();
+        var valC = parseInt(optionC.substring(optionC.indexOf(',') + 1), 10);
+        var optionD = myContract.proposals(3).toString();
+        var valD = parseInt(optionD.substring(optionC.indexOf(',') + 1), 10);
+
+        var tot = valA + valB + valC + valD;
         var perA = (valA / tot) * 100;
         var perB = (valB / tot) * 100;
+        var perC = (valC / tot) * 100;
+        var perD = (valD / tot) * 100;
 
         console.log(valA);
         console.log(valB);
+        console.log(valC);
+        console.log(valD);
         console.log(perA);
         console.log(perB);
+        console.log(perC);
+        console.log(perD);
+
         this.setState({
             valA: valA,
             valB: valB,
+            valC: valC,
+            valD: valD,
             perA: perA,
             perB: perB,
+            perC: perC,
+            perD: perD,
             loading: false
         });
     }
@@ -52,28 +68,40 @@ class Results extends Component {
               </Link>
               <h1>Results</h1>
               <p>
-                How awesome is it that you can have the <a
-                  href="https://www.hyperledger.org/projects/hyperledger-burrow"
-                  target="_blank"
-                  rel="noopener noreferrer">Hyperledger Burrow</a> Ethereum VM
-                  smart contract engine running as chaincode inside <a
-                  href="https://www.hyperledger.org/projects/fabric" target="_blank"
-                  rel="noopener noreferrer">Hyperledger Fabric</a>?
+                How interested are you in having a robust permissioned blockchain
+                  platform such as <a href="https://www.hyperledger.org/projects/fabric" target="_blank"
+                  rel="noopener noreferrer">Hyperledger Fabric</a> that runs Ethereum contracts?
               </p>
               {!this.state.loading ? <div className="results__percentage--container">
                   <div className="results__item--container">
-                    <p className="resultCategory">Awesome</p>
+                    <p className="resultCategory">Not at all.</p>
                     <div id="opta" className="votebar" style={{ width: `${this.state.perA}%` }}>
                       <p className="resultValue" id="resultA">
-                        {this.state.valA}
+                        {this.state.valA != 0 && this.state.valA}
                       </p>
                     </div>
                   </div>
                   <div className="results__item--container">
-                    <p className="resultCategory">Spectacular</p>
+                    <p className="resultCategory">Somewhat, I am still exploring blockchain.</p>
                     <div id="optb" className="votebar" style={{ width: `${this.state.perB}%` }}>
                       <p className="resultValue" id="resultB">
-                        {this.state.valB}
+                        {this.state.valB != 0 && this.state.valB}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="results__item--container">
+                    <p className="resultCategory">Very! Tell me more.</p>
+                    <div id="optc" className="votebar" style={{ width: `${this.state.perC}%` }}>
+                      <p className="resultValue" id="resultC">
+                        {this.state.valC != 0 && this.state.valC}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="results__item--container">
+                    <p className="resultCategory">This is amazing! When can I get it?</p>
+                    <div id="optd" className="votebar" style={{ width: `${this.state.perD}%` }}>
+                      <p className="resultValue" id="resultD">
+                        {this.state.valD != 0 && this.state.valD}
                       </p>
                     </div>
                   </div>

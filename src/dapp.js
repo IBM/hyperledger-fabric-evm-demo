@@ -37,7 +37,7 @@ export function getContract() {
     var account = getAccountAddress();
     web3.eth.defaultAccount = '0x' + account;
     console.log("Account " + account)
-    var address = "1da3646c7bcc7d5a46940946eb9e8a259031bb69"
+    var address = "159b71804e27093896a9897568f2568f69adb300"
 
     console.log("Got address: " + address)
     var votingABI = [
@@ -117,26 +117,55 @@ export function voteB(func) {
     // window.location.href = 'results.html';
 }
 
+export function voteC(func) {
+    console.log("voted for option C");
+    var myContract = getContract();
+    myContract.vote(2);
+    // window.location.href = 'results.html';
+}
+
+export function voteD(func) {
+    console.log("voted for option D");
+    var myContract = getContract();
+    myContract.vote(3);
+    // window.location.href = 'results.html';
+}
+
 export function getResults() {
     var myContract = getContract();
     var optionA = myContract.proposals(0).toString();
     var valA = parseInt(optionA.substring(optionA.indexOf(',') + 1), 10);
     var optionB = myContract.proposals(1).toString();
     var valB = parseInt(optionB.substring(optionB.indexOf(',') + 1), 10);
-    var tot = valA + valB;
+    var optionC = myContract.proposals(2).toString();
+    var valC = parseInt(optionC.substring(optionC.indexOf(',') + 1), 10);
+    var optionD = myContract.proposals(3).toString();
+    var valD = parseInt(optionD.substring(optionC.indexOf(',') + 1), 10);
+
+    var tot = valA + valB + valC + valD;
     var perA = (valA / tot) * 100;
     var perB = (valB / tot) * 100;
+    var perC = (valC / tot) * 100;
+    var perD = (valD / tot) * 100;
 
     console.log(valA);
     console.log(valB);
+    console.log(valC);
+    console.log(valD);
     console.log(perA);
     console.log(perB);
+    console.log(perC);
+    console.log(perD);
 
     var results = {
         valA: valA,
         valB: valB,
+        valC: valC,
+        valD: valD,
         percentA: perA,
         percentB: perB,
+        percentC: perC,
+        percentD: perD,
     }
 
     return results;

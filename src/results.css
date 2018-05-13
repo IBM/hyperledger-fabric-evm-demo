@@ -43,6 +43,14 @@
     background-color: #001689;
 }
 
+#optc.votebar {
+    background-color: #0064FF;
+}
+
+#optd.votebar {
+    background-color: #001689;
+}
+
 .resultValue {
     position: absolute;
     right: 1rem;
