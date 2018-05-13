@@ -132,25 +132,25 @@ class Vote extends Component {
                 <div className="radio">
                   <label htmlFor="optionA" className="radio-label">
                     <input id="optionA" name="radio" type="radio" value="option1" onChange={this.handleChange} checked={this.state.selectedOption === "option1"} />
-                    Not at all
+                    Not at all.
                   </label>
                 </div>
                 <div className="radio">
                   <label htmlFor="optionB" className="radio-label">
                     <input id="optionB" name="radio" type="radio" value="option2" onChange={this.handleChange} checked={this.state.selectedOption === "option2"} />
-                    Somewhat, I am still exploring blockchain
+                    Some, tell me more.
                   </label>
                 </div>
                 <div className="radio">
                   <label htmlFor="optionC" className="radio-label">
                     <input id="optionC" name="radio" type="radio" value="option3" onChange={this.handleChange} checked={this.state.selectedOption === "option3"} />
-                    Very! Tell me more
+                    Very, tell me more!
                   </label>
                 </div>
                 <div className="radio">
                   <label htmlFor="optionD" className="radio-label">
                     <input id="optionD" name="radio" type="radio" value="option4" onChange={this.handleChange} checked={this.state.selectedOption === "option4"} />
-                    This is amazing! When can I get it?
+                    Must have now!
                   </label>
                 </div>
                 <button disabled={!this.state.selectedOption} className="duo__btn submit__vote--btn" type="submit" value="Submit" name="submit">

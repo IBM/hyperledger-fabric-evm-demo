@@ -77,36 +77,39 @@ class Results extends Component {
                     <p className="resultCategory">Not at all.</p>
                     <div id="opta" className="votebar" style={{ width: `${this.state.perA}%` }}>
                       <p className="resultValue" id="resultA">
-                        {this.state.valA != 0 && this.state.valA}
+                        {this.state.valA !== 0 && this.state.valA}
                       </p>
                     </div>
                   </div>
                   <div className="results__item--container">
-                    <p className="resultCategory">Somewhat, I am still exploring blockchain.</p>
+                    <p className="resultCategory">Some, tell me more.</p>
                     <div id="optb" className="votebar" style={{ width: `${this.state.perB}%` }}>
                       <p className="resultValue" id="resultB">
-                        {this.state.valB != 0 && this.state.valB}
+                        {this.state.valB !== 0 && this.state.valB}
                       </p>
                     </div>
                   </div>
                   <div className="results__item--container">
-                    <p className="resultCategory">Very! Tell me more.</p>
+                    <p className="resultCategory">Very, tell me more!</p>
                     <div id="optc" className="votebar" style={{ width: `${this.state.perC}%` }}>
                       <p className="resultValue" id="resultC">
-                        {this.state.valC != 0 && this.state.valC}
+                        {this.state.valC !== 0 && this.state.valC}
                       </p>
                     </div>
                   </div>
                   <div className="results__item--container">
-                    <p className="resultCategory">This is amazing! When can I get it?</p>
+                    <p className="resultCategory">Must have now!</p>
                     <div id="optd" className="votebar" style={{ width: `${this.state.perD}%` }}>
                       <p className="resultValue" id="resultD">
-                        {this.state.valD != 0 && this.state.valD}
+                        {this.state.valD !== 0 && this.state.valD}
                       </p>
                     </div>
                   </div>
                   <Link to="/vote" className="duo__btn finish__link">
                     Restart
+                  </Link>
+                  <Link to="https://twitter.com/christo4ferris/status/994979811515883523">
+                    Learn all about it here.
                   </Link>
                 </div> : "Loading"}
             </div>
