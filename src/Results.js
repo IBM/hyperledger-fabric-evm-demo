@@ -108,7 +108,7 @@ class Results extends Component {
                   <Link to="/vote" className="duo__btn finish__link">
                     Restart
                   </Link>
-                  <Link to="https://twitter.com/christo4ferris/status/994979811515883523">
+                  <Link to="https://developer.ibm.com/code/2018/05/11/two-enter-one-leaves/">
                     Learn all about it here.
                   </Link>
                 </div> : "Loading"}
