@@ -21,8 +21,12 @@ class Vote extends Component {
     handleChange(e) {
         const checkbox1 = document.querySelector("#optionA");
         const checkbox2 = document.querySelector("#optionB");
+        const checkbox3 = document.querySelector("#optionC");
+        const checkbox4 = document.querySelector("#optionD");
         checkbox1.removeAttribute("checked");
         checkbox2.removeAttribute("checked");
+        checkbox3.removeAttribute("checked");
+        checkbox4.removeAttribute("checked");
         this.setState({
             selectedOption: e.target.value,
         })
@@ -30,13 +34,31 @@ class Vote extends Component {
         if (checkbox1.hasAttribute("checked")) {
             console.log("button 1 is checked.");
             console.log(checkbox1.parentElement);
-            checkbox2.parentElement.classList.remove("radio-selected-label");
             checkbox1.parentElement.classList.add("radio-selected-label");
+            checkbox2.parentElement.classList.remove("radio-selected-label");
+            checkbox3.parentElement.classList.remove("radio-selected-label");
+            checkbox4.parentElement.classList.remove("radio-selected-label");
         } else if (checkbox2.hasAttribute("checked")) {
             console.log("button 2 is checked.");
             console.log(checkbox2.parentElement);
             checkbox1.parentElement.classList.remove("radio-selected-label");
             checkbox2.parentElement.classList.add("radio-selected-label");
+            checkbox3.parentElement.classList.remove("radio-selected-label");
+            checkbox4.parentElement.classList.remove("radio-selected-label");
+        } else if (checkbox3.hasAttribute("checked")) {
+            console.log("button 3 is checked.");
+            console.log(checkbox2.parentElement);
+            checkbox1.parentElement.classList.remove("radio-selected-label");
+            checkbox2.parentElement.classList.remove("radio-selected-label");
+            checkbox3.parentElement.classList.add("radio-selected-label");
+            checkbox4.parentElement.classList.remove("radio-selected-label");
+        } else if (checkbox4.hasAttribute("checked")) {
+            console.log("button 4 is checked.");
+            console.log(checkbox2.parentElement);
+            checkbox1.parentElement.classList.remove("radio-selected-label");
+            checkbox2.parentElement.classList.remove("radio-selected-label");
+            checkbox3.parentElement.classList.remove("radio-selected-label");
+            checkbox4.parentElement.classList.add("radio-selected-label");
         }
     }
 
@@ -54,12 +76,32 @@ class Vote extends Component {
                 this.props.history.push("/results");
             }, 2000);
             // console.log("Voting for option A");
-        } else {
+        } else if (this.state.selectedOption === "option2"){
             console.log("This should show immediately.");
             this.setState({ loading: true });
             // if vote B is selected
             // fantastic was selected
             dapp.voteB();
+            setTimeout(() => {
+                this.props.history.push("/results");
+            }, 2000);
+            // console.log("Voting for option B");
+        } else if (this.state.selectedOption === "option3"){
+            console.log("This should show immediately.");
+            this.setState({ loading: true });
+            // if vote B is selected
+            // fantastic was selected
+            dapp.voteC();
+            setTimeout(() => {
+                this.props.history.push("/results");
+            }, 2000);
+            // console.log("Voting for option B");
+        } else if (this.state.selectedOption === "option4"){
+            console.log("This should show immediately.");
+            this.setState({ loading: true });
+            // if vote B is selected
+            // fantastic was selected
+            dapp.voteD();
             setTimeout(() => {
                 this.props.history.push("/results");
             }, 2000);
@@ -90,13 +132,25 @@ class Vote extends Component {
                 <div className="radio">
                   <label htmlFor="optionA" className="radio-label">
                     <input id="optionA" name="radio" type="radio" value="option1" onChange={this.handleChange} checked={this.state.selectedOption === "option1"} />
-                    Awesome
+                    Not at all
                   </label>
                 </div>
                 <div className="radio">
                   <label htmlFor="optionB" className="radio-label">
                     <input id="optionB" name="radio" type="radio" value="option2" onChange={this.handleChange} checked={this.state.selectedOption === "option2"} />
-                    Fantastic
+                    Somewhat, I am still exploring blockchain
+                  </label>
+                </div>
+                <div className="radio">
+                  <label htmlFor="optionC" className="radio-label">
+                    <input id="optionC" name="radio" type="radio" value="option3" onChange={this.handleChange} checked={this.state.selectedOption === "option3"} />
+                    Very! Tell me more
+                  </label>
+                </div>
+                <div className="radio">
+                  <label htmlFor="optionD" className="radio-label">
+                    <input id="optionD" name="radio" type="radio" value="option4" onChange={this.handleChange} checked={this.state.selectedOption === "option4"} />
+                    This is amazing! When can I get it?
                   </label>
                 </div>
                 <button disabled={!this.state.selectedOption} className="duo__btn submit__vote--btn" type="submit" value="Submit" name="submit">
