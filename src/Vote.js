@@ -4,6 +4,8 @@ import * as dapp from "./dapp";
 import loaderIcon from "./assets/images/loader_duo.svg";
 import arrow from "./assets/images/arrow-left.svg";
 import diagram from "./assets/images/diagram.png";
+import qr from "./assets/images/qr.png";
+
 import "./vote.css";
 
 class Vote extends Component {
@@ -172,6 +174,7 @@ class Vote extends Component {
                     to interact with Hyperledger Fabric just as they would
                     with Ethereum.
               </p>
+                <img src={qr} alt="" className="qr_image" />
             </div>
           </div>;
     }
