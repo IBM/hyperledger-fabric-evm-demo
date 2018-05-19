@@ -3,17 +3,17 @@ import { withRouter } from "react-router-dom";
 import './home.css';
 
 const users = [
-  '9ab9dd6465daf96f9c53abd1d21f5cd2bc0df4ee',
-  'd58bc8f6fb11ada3603ec72d5d584f0d3904746d',
-  '3fdbee0cafb149617d8ec88f67daf825bb71fb95',
-  '8b73e85b693af3d5f4fb11461f7a2f7e7e319ca2'
+  '613ac660a26a66a52eadc02cda9f6c7e7326e675',
+  '853c507c8abde6d6d82f2e84cc4ca65f82ae5a09',
+  '537627a1e9456be6fc015800d23cf91a93555fe6',
+  '861256673241f8a9e3b086b1b01e76143253c8fc'
 ];
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: "",
+      username: users[Math.floor(Math.random() * 4)],
       password: ""
     };
     this.setPassword = this.setPassword.bind(this);
@@ -24,9 +24,6 @@ class Home extends Component {
     this.setState({
       password: e.target.value
     });
-    this.setState({
-      username: users[Math.floor(Math.random() * 4)]
-    })
   }
 
   setUserName(e) {
@@ -35,12 +32,12 @@ class Home extends Component {
     });
   }
 
-  setCookie() {
+  setCookie(username) {
     return new Promise((resolve, reject) => {
       const date = new Date();
       date.setTime(date.getTime() + (1 * 24 * 60 * 60 * 1000));
       const expires = "expires=" + date.toUTCString();
-      const cookie = `ETHAccount=9ab9dd6465daf96f9c53abd1d21f5cd2bc0df4ee;${expires};path=/`;
+      const cookie = "ETHAccount="+ username + `;${expires};path=/`;
       document.cookie = cookie;
       console.log(cookie);
       console.log(document.cookie);
@@ -60,7 +57,7 @@ class Home extends Component {
     console.log("password: " + this.state.password);
     if ( this.state.password.trim() === "some-password" ) {
       // set cookie in here
-      this.setCookie().then(() => {
+      this.setCookie(this.state.username).then(() => {
         console.log("Set cookie and promise successfully. Redirecting to voting page.");
         this.props.history.push("/vote");
       });
