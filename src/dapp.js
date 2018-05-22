@@ -37,7 +37,7 @@ export function getContract() {
     var account = getAccountAddress();
     web3.eth.defaultAccount = '0x' + account;
     console.log("Account " + account)
-    var address = "159b71804e27093896a9897568f2568f69adb300"
+    var address = "5ebf511899003855c89af07acf6df7d437ad4cf8"
 
     console.log("Got address: " + address)
     var votingABI = [
