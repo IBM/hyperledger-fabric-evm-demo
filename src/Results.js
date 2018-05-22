@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import * as dapp from "./dapp";
 import arrow from "./assets/images/arrow-left.svg";
 import diagram from "./assets/images/diagram.png";
+import qr from "./assets/images/qr.png";
 import "./results.css";
 
 class Results extends Component {
@@ -123,6 +124,7 @@ class Results extends Component {
                 to interact with Hyperledger Fabric just as they would
                 with Ethereum.
               </p>
+              <img src={qr} alt="" className="qr_image" />
             </div>
           </div>;
     }
