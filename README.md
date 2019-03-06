@@ -50,5 +50,3 @@ cf push
 And here's the [repo](https://github.com/swetharepakula/fabric-evm-ibm-container-service)
 with the bits you need to deploy a Fabric network with the EVMCC installed to the IBM
 Cloud Kubernetes Service(IKS).
-
-* Password: some-password

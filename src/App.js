@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Home from "./Home";
 import Vote from "./Vote";
 import Results from "./Results";
 import fabricImage from "./assets/images/Hyperledger_Fabric_Logo_White.png";
@@ -16,8 +15,7 @@ class App extends Component {
         <div className="main__container">
             <Router>
                 <div>
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/vote" component={Vote} />
+                    <Route exact path="/" component={Vote} />
                     <Route exact path="/results" component={Results} />
                 </div>
             </Router>
