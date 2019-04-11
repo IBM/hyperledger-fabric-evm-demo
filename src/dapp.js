@@ -1,8 +1,7 @@
 import Web3 from "web3";
 
 var myContract;
-// var provider = "http://localhost:5000";
-var provider = "https://fabproxy.mybluemix.net";
+var provider = "http://localhost:5000";
 
 export function getContract() {
     console.log("Getting the Contract")
@@ -16,7 +15,8 @@ export function getContract() {
     var account = web3.eth.accounts[0]
     web3.eth.defaultAccount = account;
     console.log("Account " + account)
-    var address = contractAddress
+    //Don't forget to edit the contract address below with your contract address
+    var address = "change-to-real-contract-address"
 
     console.log("Got address: " + address)
     var votingABI = [

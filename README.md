@@ -10,20 +10,20 @@ Hyperledger Fabric GRPC API calls.
 
 1. First deploy the [contract](poll.sol). When initializing the contract pass in four proposals with any names.
 The specific proposal names do not matter, four proposals are needed for the
-dApp.
+dApp. For example, you can use: `[ "0x61", "0x62", "0x63", "0x64" ]`.
 
 For this step, you need a running Hyperledger Fabric cluster
 that has the EVM Chaincode ([EVMCC](https://github.com/hyperledger/fabric-chaincode-evm))
 installed. Follow the [tutorial](https://github.com/hyperledger/fabric-chaincode-evm/blob/master/examples/EVM_Smart_Contracts.md)
 to learn how to install the EVMCC and get Fab3 running.
 
-2. Update the [provider variable](https://github.com/IBM/hyperledger-fabric-evm-demo/blob/master/src/dapp.js#L5)
+2. Update the [provider variable](https://github.com/IBM/hyperledger-fabric-evm-demo/blob/master/src/dapp.js#L4)
 with the address of your instance of the Fab3 proxy.
 ```
 var provider = "https://localhost:5000"
 ```
 
-3. Update the [contract address](https://github.com/IBM/hyperledger-fabric-evm-demo/blob/master/src/dapp.js#L40)
+3. Update the [contract address](https://github.com/IBM/hyperledger-fabric-evm-demo/blob/master/src/dapp.js#L19)
 with the contract address of the contract you deployed in step 1.
 
 4. To run the dApp, run the following commands at the root of this repo.
