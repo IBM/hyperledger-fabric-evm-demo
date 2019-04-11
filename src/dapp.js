@@ -1,29 +1,7 @@
 import Web3 from "web3";
 
 var myContract;
-// var provider = "http://localhost:5000";
-var provider = "https://fabproxy.mybluemix.net";
-
-export function getAccountAddress() {
-    var name = "ETHAccount=";
-    var decodedCookie = decodeURIComponent(document.cookie);
-    var ca = decodedCookie.split(';');
-    console.log(name);
-    console.log(decodedCookie);
-    console.log(ca);
-    for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) === ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) === 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    console.log("Failed to get ethereum account address. Please login")
-    return;
-
-}
+var provider = "http://localhost:5000";
 
 export function getContract() {
     console.log("Getting the Contract")
@@ -34,10 +12,11 @@ export function getContract() {
         web3 = new Web3();
     }
     web3.setProvider(new web3.providers.HttpProvider(provider));
-    var account = getAccountAddress();
-    web3.eth.defaultAccount = '0x' + account;
+    var account = web3.eth.accounts[0]
+    web3.eth.defaultAccount = account;
     console.log("Account " + account)
-    var address = "5ebf511899003855c89af07acf6df7d437ad4cf8"
+    //Don't forget to edit the contract address below with your contract address
+    var address = "change-to-real-contract-address"
 
     console.log("Got address: " + address)
     var votingABI = [

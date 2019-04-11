@@ -133,6 +133,9 @@
 }
 
 @media (min-width: 1220px) {
+    .side__panel--container {
+        display: block;
+    }
     .vote__container {
         margin-right: 500px;
     }
